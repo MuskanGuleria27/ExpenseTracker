@@ -28,10 +28,10 @@ connectDB();
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-app.use("https://expensetracker-ls4.onrender.com/api/v1/auth",authRoutes);
-app.use("https://expensetracker-ls4.onrender.com/api/v1/income",incomeRoutes);
-app.use("https://expensetracker-ls4.onrender.com/api/v1/expense",expenseRoutes);
-app.use("https://expensetracker-ls4.onrender.com/api/v1/dashboard",dashboardRoutes);
+app.use("https://expensetracker-l5s4.onrender.com/api/v1/auth",authRoutes);
+app.use("https://expensetracker-l5s4.onrender.com/api/v1/income",incomeRoutes);
+app.use("https://expensetracker-l5s4.onrender.com/api/v1/expense",expenseRoutes);
+app.use("https://expensetracker-l5s4.onrender.com/api/v1/dashboard",dashboardRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
