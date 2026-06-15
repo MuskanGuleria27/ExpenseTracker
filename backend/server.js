@@ -16,15 +16,12 @@ const dashboardRoutes = require('./routes/dashboardRoutes');
 const app = express();
 
 app.use(cors({
-  origin: [
-    "https://expensetracker-six-rho.vercel.app"
-  ],
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true,
-  allowedHeaders: ["Content-Type", "Authorization"]
+  origin: process.env.CLIENT_URL,
+  methods: ['GET','POST','PUT','DELETE'],
+  allowedHeaders: ['Content-Type','Authorization'],
+  credentials: true
 }));
 
-app.options("*", cors());
 
 app.use(express.json());
 
